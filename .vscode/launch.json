@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {"name": "Build dataset", "type": "debugpy", "request": "launch", "module": "apm_metrics.build_dibels", "cwd": "${workspaceFolder}", "console": "integratedTerminal"},
+        {"name": "Verify dataset", "type": "debugpy", "request": "launch", "program": "${workspaceFolder}/tests/verify_dibels.py", "cwd": "${workspaceFolder}", "console": "integratedTerminal"},
+        {"name": "Make fake data (with raw exports)", "type": "debugpy", "request": "launch", "program": "${workspaceFolder}/demo/make_fake_data.py", "args": ["--raw"], "cwd": "${workspaceFolder}", "console": "integratedTerminal"},
+        {"name": "Make demo guide page", "type": "debugpy", "request": "launch", "program": "${workspaceFolder}/demo/make_guide_html.py", "cwd": "${workspaceFolder}", "console": "integratedTerminal"},
+        {"name": "Verify fake data", "type": "debugpy", "request": "launch", "program": "${workspaceFolder}/demo/verify_fake_data.py", "cwd": "${workspaceFolder}", "console": "integratedTerminal"},
+        {"name": "Test scanner", "type": "debugpy", "request": "launch", "program": "${workspaceFolder}/tests/test_scanner.py", "cwd": "${workspaceFolder}", "console": "integratedTerminal"}
+    ]
+}

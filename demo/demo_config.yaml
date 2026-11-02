@@ -1,0 +1,16 @@
+# Settings for the fake-data demo tools. Nothing here is real student data.
+# Paths are relative to the project folder (or give a full path). Use forward slashes.
+
+# Where the fake datasets, history copies and the guide page are written. This folder only ever holds fake data.
+output_dir: "output/fake_demo"
+
+# The fake "today" for each saved snapshot (oldest to newest); the last one is the current data.
+snapshots: ["2026-09-21", "2026-10-05", "2026-10-19", "2026-10-26", "2026-11-02"]
+last_probe: "2026-10-30"        # latest probe date in the newest fake export (the Friday before the last snapshot)
+seed: 20261026                  # same seed = same fake data every run
+
+# Optional safety check for a school that has real exports: folders holding the REAL data. The scanner and the verifier read
+# them in memory to prove nothing real got into a fake file or a workbook you are about to publish. Never printed.
+real_data:
+  cc_folder: ""          # for example "data/raw/powerschool_cc"
+  tableau_folder: ""     # for example "output/tableau"

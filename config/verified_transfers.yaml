@@ -1,0 +1,9 @@
+# Optional. Students who took the beginning-of-year benchmark but have since transferred out (check in your student
+# information system). They are not on the roster, so they are not counted against a teacher; any student who is in the
+# benchmark but not on the roster and not listed here is flagged for review in data_quality.xlsx.
+#
+# Add student numbers as text, for example: student_ids: ["100234", "100877"]
+# Keep real student numbers out of any public copy of this project.
+
+verified_on: ""
+student_ids: []

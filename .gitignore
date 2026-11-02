@@ -1,0 +1,22 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Student data and generated outputs never go in the repository.
+data/raw/dibels/*
+!data/raw/dibels/.gitkeep
+data/raw/powerschool_cc/*
+!data/raw/powerschool_cc/.gitkeep
+data/calendar/*
+!data/calendar/.gitkeep
+output/
+*.csv
+*.text
+*.txt
+*.xlsx
+*.xls
+*.twb
+*.twbx
+*.hyper
+!requirements.txt

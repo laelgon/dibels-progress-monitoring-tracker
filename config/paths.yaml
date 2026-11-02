@@ -1,0 +1,21 @@
+# Where the data lives. Paths are relative to this project's folder, or give a full path.
+# Use forward slashes, even on Windows. Student data stays in these folders and is never committed (see .gitignore).
+
+source_dirs:
+  dibels: "data/raw/dibels"                  # DIBELS benchmark (BM) and progress monitoring (PM) exports
+  powerschool_cc: "data/raw/powerschool_cc"  # PowerSchool CC table export (current courses)
+  calendar: "data/calendar"                  # testing_calendar.xlsx (build one with tools/make_example_calendar.py)
+
+calendar_file: "testing_calendar.xlsx"
+
+# Outputs: the CSVs Tableau reads are written to <output_dir>/tableau
+output_dir: "output"
+
+# Shown in the generated dashboard guide page.
+school_name: "Your School"
+
+# Which export files to use. The newest pull date in a file name wins for the roster and the benchmark;
+# every progress monitoring file for the school year is combined.
+dibels:
+  school_year: "2026-2027"
+  benchmark_period: "BOY"       # the benchmark that decides who needs progress monitoring

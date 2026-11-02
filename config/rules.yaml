@@ -1,0 +1,11 @@
+# Rules for who is tracked and what counts as tested. See docs/dibels_tracking_logic.md.
+
+# Progress monitoring exists for K-5 only (PK has none). Rows outside these grades are dropped in code
+# even if they are left in an export (PowerSchool -1 = PK, 0 = K; DIBELS exports also carry grades 6-8).
+grades_in_scope: ["K", "1", "2", "3", "4", "5"]
+
+# Benchmark composite levels that are expected to be progress monitored.
+tracked_levels: ["Well Below", "Below"]
+
+# PowerSchool: a student's homeroom is their active section whose Section_Number ends with this.
+homeroom_section_suffix: "HR"

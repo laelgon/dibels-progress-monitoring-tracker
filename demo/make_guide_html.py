@@ -208,6 +208,11 @@ def main():
     html = build(facts())
     OUT.write_text(html, encoding="utf-8")
     print(f"Wrote {OUT} ({len(html):,} characters)")
+    # A copy for GitHub Pages: Settings > Pages > branch main, folder /docs serves docs/index.html as a small web page.
+    site = settings.ROOT / "docs"
+    (site / "index.html").write_text(html, encoding="utf-8")
+    (site / ".nojekyll").write_text("", encoding="utf-8")        # serve the files as they are, without GitHub's Jekyll processing
+    print(f"Wrote {site / 'index.html'} for GitHub Pages")
 
 
 if __name__ == "__main__":
